@@ -1,0 +1,44 @@
+swagger dependency --- swaagger 3 with spring boot 3 dependency 
+url: localhost:[port_num]/swagger-ui/index.html
+
+
+netstat -ano | findstr :8762
+taskkill /PID <pid_number> /F
+
+
+
+
+
+eurekaServer 
+Dependencies:Eureka Server
+
+projectInfo:
+validation 
+Eureka_client
+mysql-connector-j
+
+employeeInfo:
+Actuator
+openFIgma 
+eureka client+other
+
+common dependencies
+data-jpa
+mysql
+web
+devtools
+lombok
+
+
+MongoDB
+instead of @entity here in mongo we use @Document(collections= tableName)
+**task 2 :generate pdf document from application based on input data (by using jasper reports)**//wednesday
+
+
+doc format
+inv no ::::
+
+errro: productId in reviews should be duplicate but it not happening 
+
+
+security dependencies::: jwt api,jwt 

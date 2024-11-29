@@ -1,0 +1,21 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://registry-sr:8763/eureka/
+
+server:
+  port: 9093
+
+spring:
+  application:
+    name: Reviews
+  datasource:
+    url: jdbc:mysql://mysqldb-rev:3306/review
+    username: root
+    password: pass@word1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+

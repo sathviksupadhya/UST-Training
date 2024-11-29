@@ -1,0 +1,49 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://registry-sr:8763/eureka/
+
+server:
+  port: 8222
+
+spring:
+  application:
+    name: Api-GateWay
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: Product
+          uri: http://product-sr:9091/products
+          predicates:
+            - Path=/products/**
+
+        - id: Supplier
+          uri: http://supplier-sr:9092/suppliers
+          predicates:
+            - Path=/suppliers/**
+
+        - id: Reviews
+          uri: http://review-sr:9093
+          predicates:
+            - Path=/reviews/**
+
+        - id: authentication-service
+          uri: http://authentication-service:8090/mydb
+          predicates:
+            - Path=/api/auth/**
+      routes[0]:
+        filters[0]: AuthenticationFilter
+      routes[1]:
+        filters[0]: AuthenticationFilter
+      routes[2]:
+        filters[0]: AuthenticationFilter
+
+
+
+#  spring:
+#    main:
+#      web-application-type: reactive

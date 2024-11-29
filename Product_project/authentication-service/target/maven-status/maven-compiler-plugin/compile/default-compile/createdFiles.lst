@@ -1,0 +1,9 @@
+com\example\authentication_service\Service\CustomUserDetails.class
+com\example\authentication_service\Service\jwtService.class
+com\example\authentication_service\Config\AuthConfig.class
+com\example\authentication_service\dao\UserCredentialsDao.class
+com\example\authentication_service\Controller\UserCredentialsController.class
+com\example\authentication_service\dao\entity\UserCredentialsEntity.class
+com\example\authentication_service\Service\UserCredentialsService.class
+com\example\authentication_service\AuthenticationServiceApplication.class
+com\example\authentication_service\Service\CustomUserDetailsService.class

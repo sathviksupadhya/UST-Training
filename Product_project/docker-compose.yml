@@ -1,0 +1,125 @@
+
+services:
+  registry-sr:
+    image: registry-img
+    build: ./InventoryServer
+    container_name: registry-sr
+    ports:
+      - "8763:8763"
+    networks:
+      - app-network
+
+  api-gateway-sr:
+    image: api-gateway
+    build: ./Api-GateWay
+    container_name: api-gateway-sr
+    ports:
+      - "8222:8222"
+    networks:
+      - app-network
+    depends_on:
+      - registry-sr
+
+  authentication-sr:
+    image: authentication-img
+    build: ./authentication-service
+    container_name: authentication-sr
+    ports:
+      - "8090:8090"
+    networks:
+      - app-network
+    depends_on:
+      - registry-sr
+      - api-gateway-sr
+
+  product-sr:
+    image: product-service
+    build: ./Product
+    container_name: product-sr
+    ports:
+      - "9091:9091"
+    networks:
+      - app-network
+    depends_on:
+      - registry-sr
+      - api-gateway-sr
+      - authentication-sr
+
+  supplier-sr:
+    image: supplier-service
+    build: ./supplierMicroservice
+    container_name: supplier-sr
+    ports:
+      - "9092:9092"
+    networks:
+      - app-network
+    depends_on:
+      - registry-sr
+      - api-gateway-sr
+      - authentication-sr
+
+  review-sr:
+    image: review-service
+    build: ./Reviews
+    container_name: review-sr
+    ports:
+      - "9093:9093"
+    networks:
+      - app-network
+    depends_on:
+      - registry-sr
+      - api-gateway-sr
+      - authentication-sr
+
+  mysqldb-prod:
+    image: mysql:8
+    container_name: mysqldb-prod
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass@word1
+      - MYSQL_DATABASE=product
+    ports:
+     - "3305:3306"
+    networks:
+      - app-network
+  mysqldb-supp:
+    image: mysql:8
+    container_name: mysqldb-supp
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass@word1
+      - MYSQL_DATABASE=supplier
+    ports:
+      - "3307:3306"
+    networks:
+      - app-network
+  mysqldb-rev:
+    image: mysql:8
+    container_name: mysqldb-rev
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass@word1
+      - MYSQL_DATABASE=review
+    ports:
+      - "3308:3306"
+    networks:
+      - app-network
+
+  mysqldb-mydb:
+    image: mysql:8
+    container_name: mysqldb-mydb
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass@word1
+      - MYSQL_DATABASE=mydb
+    ports:
+      - "3309:3306"
+    networks:
+      - app-network
+
+
+
+
+
+
+
+#    networks:
+#      -app-network
+networks:
+  app-network:

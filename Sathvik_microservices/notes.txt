@@ -1,0 +1,1 @@
+when i click on each particular event card. it should navigate to feedback-section where at the left side i want the eventimage and at the right side i need the feedback section where users can put their feedback., add a cooment icon below each card if the user clicks on that comment icon then @Feedbackform.jsx must be opened as a popup window to post their comments.

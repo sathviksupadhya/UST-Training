@@ -1,0 +1,56 @@
+{
+  "cohorts": 
+    [
+      {
+        "id": 201,
+        "cohortSize": 26,
+        "cohortVenueId": 0,
+        "cohortStack": "Java Full Stack",
+        "cohortStartDate": "2024-12-12T00:00:00.000Z",
+        "cohortDurationWeeks": 6,
+        "cohortSPOC": "",
+        "cohortInstructor": ""
+      },
+      {
+        "id": 202,
+        "cohortSize": 25,
+        "cohortVenueId": 101,
+        "cohortStack": ".Net Full Stack",
+        "cohortStartDate": "2024-11-11T00:00:00.000Z",
+        "cohortDurationWeeks": 6,
+        "cohortSPOC": "",
+        "cohortInstructor": ""
+      },
+      {
+        "id": 203,
+        "cohortSize": 20,
+        "cohortVenueId": 102,
+        "cohortStack": "Python Full Stack",
+        "cohortStartDate": "2024-12-12T00:00:00.000Z",
+        "cohortDurationWeeks": 6,
+        "cohortSPOC": "",
+        "cohortInstructor": ""
+      }
+    
+  ],
+  "venues": 
+    [
+      {
+        "id": 101,
+        "venueName": "Pallavas",
+        "venueSeater": 30,
+        "isVenueAC": true,
+        "venueCity": "Trivandrum",
+        "venueState": "Kerala"
+      },
+      {
+        "id": 102,
+        "venueName": "Cholans",
+        "venueSeater": 30,
+        "isVenueAC": true,
+        "venueCity": "Trivandrum",
+        "venueState": "Kerala"
+      }
+    ]
+  
+}

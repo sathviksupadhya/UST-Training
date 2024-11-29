@@ -1,0 +1,9 @@
+C:\Users\Administrator\Desktop\Product_project\authentication-service\src\main\java\com\example\authentication_service\AuthenticationServiceApplication.java
+C:\Users\Administrator\Desktop\Product_project\authentication-service\src\main\java\com\example\authentication_service\Config\AuthConfig.java
+C:\Users\Administrator\Desktop\Product_project\authentication-service\src\main\java\com\example\authentication_service\Controller\UserCredentialsController.java
+C:\Users\Administrator\Desktop\Product_project\authentication-service\src\main\java\com\example\authentication_service\dao\entity\UserCredentialsEntity.java
+C:\Users\Administrator\Desktop\Product_project\authentication-service\src\main\java\com\example\authentication_service\dao\UserCredentialsDao.java
+C:\Users\Administrator\Desktop\Product_project\authentication-service\src\main\java\com\example\authentication_service\Service\CustomUserDetails.java
+C:\Users\Administrator\Desktop\Product_project\authentication-service\src\main\java\com\example\authentication_service\Service\CustomUserDetailsService.java
+C:\Users\Administrator\Desktop\Product_project\authentication-service\src\main\java\com\example\authentication_service\Service\jwtService.java
+C:\Users\Administrator\Desktop\Product_project\authentication-service\src\main\java\com\example\authentication_service\Service\UserCredentialsService.java

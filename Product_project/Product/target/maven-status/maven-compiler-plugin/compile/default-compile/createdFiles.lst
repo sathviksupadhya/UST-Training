@@ -1,0 +1,10 @@
+com\example\Product\feign\SupplierClient.class
+com\example\Product\ProductApplication.class
+com\example\Product\controller\ProductController.class
+com\example\Product\model\Product.class
+com\example\Product\repository\ProductRepository.class
+com\example\Product\feign\ReviewClient.class
+com\example\Product\client\Reviews.class
+com\example\Product\client\FullResponse.class
+com\example\Product\client\Supplier.class
+com\example\Product\service\ProductService.class
